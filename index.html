@@ -4,29 +4,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Abhay Vishwakarma</title>
-
-    <link rel="stylesheet" href="style.css">
-    <!-- tailwindcss -->
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-
+    <title>Abhay Vishwakarma - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
 </head>
 
-<body>
-    <div class="flex h-screen justify-center align-middle items-center bg-black text-white">
+<body class="bg-gray-900 text-gray-100 p-6 md:p-12">
+    <div class="max-w-4xl mx-auto space-y-12">
+        <!-- Header -->
+        <header class="text-center mb-16">
+            <h1 class="text-5xl font-bold mb-6">Abhay Vishwakarma</h1>
+            <p class="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
+                A passionate full-stack developer specializing in blockchain and AI technologies.
+                Building innovative solutions that make a difference.
+            </p>
+            <!-- Social Icons -->
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="https://github.com/Abhaysoft-inc" class="text-gray-400 hover:text-white transition-colors"
+                    target="_blank">
+                    <i data-feather="github" class="w-6 h-6"></i>
+                </a>
+                <a href="https://twitter.com/abhayofc" class="text-gray-400 hover:text-white transition-colors"
+                    target="_blank">
+                    <i data-feather="twitter" class="w-6 h-6"></i>
+                </a>
+                <a href="https://linkedin.com/in/abhayvis" class="text-gray-400 hover:text-white transition-colors"
+                    target="_blank">
+                    <i data-feather="linkedin" class="w-6 h-6"></i>
+                </a>
+            </div>
+            <!-- CTA Buttons -->
+            <div class="flex justify-center space-x-4 mb-8">
+                <a href="mailto:abhayofc@yahoo.com"
+                    class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors">
+                    Get in touch
+                </a>
+                <a href="#projects"
+                    class="border border-gray-600 hover:border-blue-500 px-6 py-3 rounded-lg transition-colors">
+                    View Projects
+                </a>
+            </div>
+            <!-- Contact Info -->
+            <div class="flex justify-center space-x-6 text-gray-400">
 
+                <a href="mailto:abhayofc@yahoo.com" class="hover:text-blue-400 transition-colors">abhayofc@yahoo.com</a>
+                <span>+91 8948041722</span>
+            </div>
+        </header>
 
-        <div class="">
-            <p class="text-center text-2xl font-mono">Hi</p>
-            <p class="text-center text-[48px] font-mono">Abhay Vishwakarma</p>
-            <p class="text-center text-2xl font-mono">here!</p>
-        </div>
+        <!-- Projects -->
+        <section id="projects" class="mb-16">
+            <h2 class="text-2xl font-bold mb-8 text-blue-400">Featured Projects</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="group bg-gray-800 p-6 rounded-xl hover:bg-gray-750 transition-all">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-semibold">AfterDoc</h3>
+                        <span class="text-blue-400">&rarr;</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">AI-powered medical assistant using OCR and NLP for medical reports
+                        analysis
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs bg-gray-700 px-3 py-1 rounded-full">Next.js</span>
+                        <span class="text-xs bg-gray-700 px-3 py-1 rounded-full">Gemini API</span>
+                        <span class="text-xs bg-gray-700 px-3 py-1 rounded-full">Vision API</span>
+                    </div>
+                </div>
+
+                <div class="group bg-gray-800 p-6 rounded-xl hover:bg-gray-750 transition-all">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-semibold">DecrowFund</h3>
+                        <span class="text-blue-400">&rarr;</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">Blockchain-based crowdfunding platform with IPFS integration</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs bg-gray-700 px-3 py-1 rounded-full">Solidity</span>
+                        <span class="text-xs bg-gray-700 px-3 py-1 rounded-full">Next.js</span>
+                        <span class="text-xs bg-gray-700 px-3 py-1 rounded-full">IPFS</span>
+                    </div>
+                </div>
+
+                <!-- Add these project cards inside the grid in the projects section -->
+                <div class="group bg-gray-800 p-6 rounded-xl hover:bg-gray-750 transition-all">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-semibold">StreamXT</h3>
+                        <span class="text-blue-400">&rarr;</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">High-performance media streaming and recording tool leveraging WebRTC
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs bg-gray-700 px-3 py-1 rounded-full">Next.js</span>
+                        <span class="text-xs bg-gray-700 px-3 py-1 rounded-full">WebRTC</span>
+                        <span class="text-xs bg-gray-700 px-3 py-1 rounded-full">ffmpeg</span>
+                    </div>
+                </div>
+
+                <div class="group bg-gray-800 p-6 rounded-xl hover:bg-gray-750 transition-all">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-semibold">JunieorDev</h3>
+                        <span class="text-blue-400">&rarr;</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">AI-powered assistant for junior developers using Gemini APIs</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs bg-gray-700 px-3 py-1 rounded-full">Next.js</span>
+                        <span class="text-xs bg-gray-700 px-3 py-1 rounded-full">Gemini APIs</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section class="grid md:grid-cols-2 gap-8">
+            <div>
+                <h2 class="text-2xl font-bold mb-4 text-blue-400">Skills</h2>
+                <div class="space-y-2">
+                    <p><span class="text-gray-400">Languages:</span> Javascript, Solidity, C++, SQL</p>
+                    <p><span class="text-gray-400">Technologies:</span> NodeJS, NEXT.js, MongoDB, PostgresSQL</p>
+                    <p><span class="text-gray-400">Tools:</span> Git, Postman, Cursor</p>
+                </div>
+            </div>
+
+            <!-- Education -->
+            <div>
+                <h2 class="text-2xl font-bold mb-4 text-blue-400">Education</h2>
+                <div class="space-y-2">
+                    <p>Bachelor's Degree - KNIT Sultanpur (2024-2028)</p>
+                    <p>Class 12th CBSE - 2023</p>
+                    <p>Class 10th CBSE - 2021</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements -->
+        <section>
+            <h2 class="text-2xl font-bold mb-4 text-blue-400">Achievements</h2>
+            <ul class="list-disc list-inside text-gray-400 space-y-2">
+                <li>Secured 1st position in a vibe coding hackathon in college</li>
+                <li>Reported security vulnerabilities in tech organizations including python.org</li>
+                <li>Secured top ranks in college events (Web Dev, ML and Robotics)</li>
+            </ul>
+        </section>
     </div>
 
-
-
-    <script src="index.js"></script>
-
+    <script>
+        feather.replace()
+    </script>
 </body>
 
 </html>
