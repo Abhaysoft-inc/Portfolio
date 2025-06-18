@@ -7,147 +7,450 @@
     <title>Abhay Vishwakarma - Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/feather-icons"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .project-card {
+            background: linear-gradient(145deg, #1f2937, #111827);
+            border: 1px solid rgba(59, 130, 246, 0.1);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .project-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            border-color: rgba(59, 130, 246, 0.3);
+            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.1);
+        }
+        
+        .skill-tag {
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            transition: all 0.3s ease;
+        }
+        
+        .skill-tag:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+        }
+        
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .pulse-glow {
+            animation: pulse-glow 2s ease-in-out infinite alternate;
+        }
+        
+        @keyframes pulse-glow {
+            from { box-shadow: 0 0 20px rgba(59, 130, 246, 0.3); }
+            to { box-shadow: 0 0 30px rgba(59, 130, 246, 0.6); }
+        }
+        
+        .text-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .social-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            transform: translateY(-3px) scale(1.1);
+            filter: drop-shadow(0 4px 8px rgba(59, 130, 246, 0.3));
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+        }
+        
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+        
+        .btn-primary:hover::before {
+            left: 100%;
+        }
+        
+        .btn-secondary {
+            border: 2px solid rgba(59, 130, 246, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-secondary:hover {
+            border-color: #3b82f6;
+            background: rgba(59, 130, 246, 0.1);
+            transform: translateY(-2px);
+        }
+        
+        .animate-blob {
+            animation: blob 7s infinite;
+        }
+        
+        .animation-delay-2000 {
+            animation-delay: 2s;
+        }
+        
+        .animation-delay-4000 {
+            animation-delay: 4s;
+        }
+        
+        @keyframes blob {
+            0% {
+                transform: translate(0px, 0px) scale(1);
+            }
+            33% {
+                transform: translate(30px, -50px) scale(1.1);
+            }
+            66% {
+                transform: translate(-20px, 20px) scale(0.9);
+            }
+            100% {
+                transform: translate(0px, 0px) scale(1);
+            }
+        }
+        
+        /* Typewriter effect for the main heading */
+        .typewriter {
+            overflow: hidden;
+            border-right: 3px solid #3b82f6;
+            white-space: nowrap;
+            animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+        }
+        
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: #3b82f6; }
+        }
+        
+        /* Parallax effect for sections */
+        .parallax {
+            transform: translateZ(0);
+            will-change: transform;
+        }
+        
+        /* Enhanced hover effects */
+        .hover-lift {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .hover-lift:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+    </style>
 </head>
 
-<body class="bg-gray-900 text-gray-100 p-6 md:p-12">
-    <div class="max-w-4xl mx-auto space-y-12">
+<body class="bg-gradient-to-br from-gray-900 via-gray-800 to-black text-gray-100 min-h-screen">
+    <!-- Animated Background -->
+    <div class="fixed inset-0 overflow-hidden pointer-events-none">
+        <div class="absolute -top-40 -right-40 w-80 h-80 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
+        <div class="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
+        <div class="absolute top-40 left-40 w-80 h-80 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div>
+    </div>
+
+    <div class="relative z-10 max-w-6xl mx-auto p-6 md:p-12 space-y-16">
         <!-- Header -->
-        <header class="text-center mb-16">
-            <h1 class="text-5xl font-bold mb-6">Abhay Vishwakarma</h1>
-            <p class="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
-                A passionate full-stack developer specializing in blockchain and AI technologies.
+        <header class="text-center mb-20" data-aos="fade-up" data-aos-duration="1000">
+            <div class="floating mb-8">
+                <div class="w-32 h-32 mx-auto bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center pulse-glow overflow-hidden">
+                    <img src="1744953185319.jpeg" alt="Abhay Vishwakarma" class="w-full h-full object-cover rounded-full">
+                </div>
+            </div>
+            <h1 class="text-6xl md:text-7xl font-bold mb-6 text-gradient">Abhay Vishwakarma</h1>
+            <p class="text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed">
+                A passionate <span class="text-blue-400 font-semibold">full-stack developer</span> specializing in 
+                <span class="text-purple-400 font-semibold">blockchain</span> and 
+                <span class="text-pink-400 font-semibold">AI technologies</span>.
                 Building innovative solutions that make a difference.
             </p>
+            
             <!-- Social Icons -->
-            <div class="flex justify-center space-x-6 mb-8">
-                <a href="https://github.com/Abhaysoft-inc" class="text-gray-400 hover:text-white transition-colors"
+            <div class="flex justify-center space-x-8 mb-10" data-aos="fade-up" data-aos-delay="200">
+                <a href="https://github.com/Abhaysoft-inc" class="social-icon text-gray-400 hover:text-white transition-all duration-300"
                     target="_blank">
-                    <i data-feather="github" class="w-6 h-6"></i>
+                    <i data-feather="github" class="w-8 h-8"></i>
                 </a>
-                <a href="https://twitter.com/abhayofc" class="text-gray-400 hover:text-white transition-colors"
+                <a href="https://twitter.com/abhayofc" class="social-icon text-gray-400 hover:text-white transition-all duration-300"
                     target="_blank">
-                    <i data-feather="twitter" class="w-6 h-6"></i>
+                    <i data-feather="twitter" class="w-8 h-8"></i>
                 </a>
-                <a href="https://linkedin.com/in/abhayvis" class="text-gray-400 hover:text-white transition-colors"
+                <a href="https://linkedin.com/in/abhayvis" class="social-icon text-gray-400 hover:text-white transition-all duration-300"
                     target="_blank">
-                    <i data-feather="linkedin" class="w-6 h-6"></i>
+                    <i data-feather="linkedin" class="w-8 h-8"></i>
                 </a>
             </div>
+            
             <!-- CTA Buttons -->
-            <div class="flex justify-center space-x-4 mb-8">
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-10" data-aos="fade-up" data-aos-delay="400">
                 <a href="mailto:abhayofc@yahoo.com"
-                    class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors">
+                    class="btn-primary text-white px-8 py-4 rounded-xl font-semibold text-lg">
                     Get in touch
                 </a>
                 <a href="#projects"
-                    class="border border-gray-600 hover:border-blue-500 px-6 py-3 rounded-lg transition-colors">
+                    class="btn-secondary px-8 py-4 rounded-xl font-semibold text-lg">
                     View Projects
                 </a>
             </div>
+            
             <!-- Contact Info -->
-            <div class="flex justify-center space-x-6 text-gray-400">
-
-                <a href="mailto:abhayofc@yahoo.com" class="hover:text-blue-400 transition-colors">abhayofc@yahoo.com</a>
+            <div class="flex flex-col sm:flex-row justify-center space-y-2 sm:space-y-0 sm:space-x-8 text-gray-400" data-aos="fade-up" data-aos-delay="600">
+                <a href="mailto:abhayofc@yahoo.com" class="hover:text-blue-400 transition-colors duration-300">abhayofc@yahoo.com</a>
+                <span class="hidden sm:inline">•</span>
                 <span>+91 8948041722</span>
             </div>
         </header>
 
         <!-- Projects -->
-        <section id="projects" class="mb-16">
-            <h2 class="text-2xl font-bold mb-8 text-blue-400">Featured Projects</h2>
-            <div class="grid md:grid-cols-2 gap-6">
-                <a href="https://afterdoc.vercel.app" target="_blank" class="group bg-gray-800 p-6 rounded-xl hover:bg-gray-750 transition-all cursor-pointer">
-                    <div class="flex justify-between items-start mb-4">
-                        <h3 class="text-xl font-semibold">AfterDoc</h3>
-                        <span class="text-blue-400">&rarr;</span>
+        <section id="projects" class="mb-20">
+            <h2 class="text-4xl font-bold mb-12 text-center text-gradient" data-aos="fade-up">Featured Projects</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <a href="https://afterdoc.vercel.app" target="_blank" 
+                   class="project-card p-8 rounded-2xl cursor-pointer group" 
+                   data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex justify-between items-start mb-6">
+                        <h3 class="text-2xl font-bold text-white group-hover:text-blue-400 transition-colors duration-300">AfterDoc</h3>
+                        <span class="text-blue-400 text-2xl group-hover:translate-x-2 transition-transform duration-300">&rarr;</span>
                     </div>
-                    <p class="text-gray-400 mb-4">AI-powered medical assistant using OCR and NLP for medical reports
-                        analysis
-                    </p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="text-xs bg-gray-700 px-3 py-1 rounded-full">Next.js</span>
-                        <span class="text-xs bg-gray-700 px-3 py-1 rounded-full">Gemini API</span>
-                        <span class="text-xs bg-gray-700 px-3 py-1 rounded-full">Vision API</span>
-                    </div>
-                </a>
-
-                <a href="https://decrowfund.vercel.app" target="_blank" class="group bg-gray-800 p-6 rounded-xl hover:bg-gray-750 transition-all cursor-pointer">
-                    <div class="flex justify-between items-start mb-4">
-                        <h3 class="text-xl font-semibold">DecrowFund</h3>
-                        <span class="text-blue-400">&rarr;</span>
-                    </div>
-                    <p class="text-gray-400 mb-4">Blockchain-based crowdfunding platform with IPFS integration</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="text-xs bg-gray-700 px-3 py-1 rounded-full">Solidity</span>
-                        <span class="text-xs bg-gray-700 px-3 py-1 rounded-full">Next.js</span>
-                        <span class="text-xs bg-gray-700 px-3 py-1 rounded-full">IPFS</span>
+                    <p class="text-gray-300 mb-6 text-lg leading-relaxed">AI-powered medical assistant using OCR and NLP for medical reports analysis</p>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="skill-tag text-xs px-4 py-2 rounded-full text-white font-medium">Next.js</span>
+                        <span class="skill-tag text-xs px-4 py-2 rounded-full text-white font-medium">Gemini API</span>
+                        <span class="skill-tag text-xs px-4 py-2 rounded-full text-white font-medium">Vision API</span>
                     </div>
                 </a>
 
-                <!-- Add these project cards inside the grid in the projects section -->
-                <a href="https://streamxt.vercel.app" target="_blank" class="group bg-gray-800 p-6 rounded-xl hover:bg-gray-750 transition-all cursor-pointer">
-                    <div class="flex justify-between items-start mb-4">
-                        <h3 class="text-xl font-semibold">StreamXT</h3>
-                        <span class="text-blue-400">&rarr;</span>
+                <a href="https://decrowfund.vercel.app" target="_blank" 
+                   class="project-card p-8 rounded-2xl cursor-pointer group" 
+                   data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex justify-between items-start mb-6">
+                        <h3 class="text-2xl font-bold text-white group-hover:text-blue-400 transition-colors duration-300">DecrowFund</h3>
+                        <span class="text-blue-400 text-2xl group-hover:translate-x-2 transition-transform duration-300">&rarr;</span>
                     </div>
-                    <p class="text-gray-400 mb-4">High-performance media streaming and recording tool leveraging WebRTC
-                    </p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="text-xs bg-gray-700 px-3 py-1 rounded-full">Next.js</span>
-                        <span class="text-xs bg-gray-700 px-3 py-1 rounded-full">WebRTC</span>
-                        <span class="text-xs bg-gray-700 px-3 py-1 rounded-full">ffmpeg</span>
+                    <p class="text-gray-300 mb-6 text-lg leading-relaxed">Blockchain-based crowdfunding platform with IPFS integration</p>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="skill-tag text-xs px-4 py-2 rounded-full text-white font-medium">Solidity</span>
+                        <span class="skill-tag text-xs px-4 py-2 rounded-full text-white font-medium">Next.js</span>
+                        <span class="skill-tag text-xs px-4 py-2 rounded-full text-white font-medium">IPFS</span>
                     </div>
                 </a>
 
-                <a href="https://junieordev.vercel.app/home" target="_blank" class="group bg-gray-800 p-6 rounded-xl hover:bg-gray-750 transition-all cursor-pointer">
-                    <div class="flex justify-between items-start mb-4">
-                        <h3 class="text-xl font-semibold">JunieorDev</h3>
-                        <span class="text-blue-400">&rarr;</span>
+                <a href="https://streamxt.vercel.app" target="_blank" 
+                   class="project-card p-8 rounded-2xl cursor-pointer group" 
+                   data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex justify-between items-start mb-6">
+                        <h3 class="text-2xl font-bold text-white group-hover:text-blue-400 transition-colors duration-300">StreamXT</h3>
+                        <span class="text-blue-400 text-2xl group-hover:translate-x-2 transition-transform duration-300">&rarr;</span>
                     </div>
-                    <p class="text-gray-400 mb-4">AI-powered assistant for junior developers using Gemini APIs</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="text-xs bg-gray-700 px-3 py-1 rounded-full">Next.js</span>
-                        <span class="text-xs bg-gray-700 px-3 py-1 rounded-full">Gemini APIs</span>
+                    <p class="text-gray-300 mb-6 text-lg leading-relaxed">High-performance media streaming and recording tool leveraging WebRTC</p>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="skill-tag text-xs px-4 py-2 rounded-full text-white font-medium">Next.js</span>
+                        <span class="skill-tag text-xs px-4 py-2 rounded-full text-white font-medium">WebRTC</span>
+                        <span class="skill-tag text-xs px-4 py-2 rounded-full text-white font-medium">ffmpeg</span>
+                    </div>
+                </a>
+
+                <a href="https://junieordev.vercel.app" target="_blank" 
+                   class="project-card p-8 rounded-2xl cursor-pointer group" 
+                   data-aos="fade-up" data-aos-delay="400">
+                    <div class="flex justify-between items-start mb-6">
+                        <h3 class="text-2xl font-bold text-white group-hover:text-blue-400 transition-colors duration-300">JunieorDev</h3>
+                        <span class="text-blue-400 text-2xl group-hover:translate-x-2 transition-transform duration-300">&rarr;</span>
+                    </div>
+                    <p class="text-gray-300 mb-6 text-lg leading-relaxed">AI-powered assistant for junior developers using Gemini APIs</p>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="skill-tag text-xs px-4 py-2 rounded-full text-white font-medium">Next.js</span>
+                        <span class="skill-tag text-xs px-4 py-2 rounded-full text-white font-medium">Gemini APIs</span>
                     </div>
                 </a>
             </div>
         </section>
 
-        <!-- Skills -->
-        <section class="grid md:grid-cols-2 gap-8">
-            <div>
-                <h2 class="text-2xl font-bold mb-4 text-blue-400">Skills</h2>
-                <div class="space-y-2">
-                    <p><span class="text-gray-400">Languages:</span> Javascript, Solidity, C++, SQL</p>
-                    <p><span class="text-gray-400">Technologies:</span> NodeJS, NEXT.js, MongoDB, PostgresSQL</p>
-                    <p><span class="text-gray-400">Tools:</span> Git, Postman, Cursor</p>
+        <!-- Skills & Education -->
+        <section class="grid md:grid-cols-2 gap-12 mb-20">
+            <div data-aos="fade-right" data-aos-delay="100">
+                <h2 class="text-3xl font-bold mb-8 text-gradient">Skills</h2>
+                <div class="space-y-4">
+                    <div class="glass-effect p-6 rounded-xl">
+                        <div class="flex items-center mb-3">
+                            <div class="w-8 h-8 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-lg flex items-center justify-center mr-3">
+                                <i data-feather="code" class="w-4 h-4 text-white"></i>
+                            </div>
+                            <p class="text-gray-400 font-medium">Languages</p>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="skill-tag text-xs px-3 py-1 rounded-full text-white font-medium">JavaScript</span>
+                            <span class="skill-tag text-xs px-3 py-1 rounded-full text-white font-medium">Solidity</span>
+                            <span class="skill-tag text-xs px-3 py-1 rounded-full text-white font-medium">C++</span>
+                            <span class="skill-tag text-xs px-3 py-1 rounded-full text-white font-medium">SQL</span>
+                        </div>
+                    </div>
+                    <div class="glass-effect p-6 rounded-xl">
+                        <div class="flex items-center mb-3">
+                            <div class="w-8 h-8 bg-gradient-to-br from-blue-400 to-purple-500 rounded-lg flex items-center justify-center mr-3">
+                                <i data-feather="layers" class="w-4 h-4 text-white"></i>
+                            </div>
+                            <p class="text-gray-400 font-medium">Technologies</p>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="skill-tag text-xs px-3 py-1 rounded-full text-white font-medium">Node.js</span>
+                            <span class="skill-tag text-xs px-3 py-1 rounded-full text-white font-medium">Next.js</span>
+                            <span class="skill-tag text-xs px-3 py-1 rounded-full text-white font-medium">MongoDB</span>
+                            <span class="skill-tag text-xs px-3 py-1 rounded-full text-white font-medium">PostgreSQL</span>
+                        </div>
+                    </div>
+                    <div class="glass-effect p-6 rounded-xl">
+                        <div class="flex items-center mb-3">
+                            <div class="w-8 h-8 bg-gradient-to-br from-green-400 to-teal-500 rounded-lg flex items-center justify-center mr-3">
+                                <i data-feather="tool" class="w-4 h-4 text-white"></i>
+                            </div>
+                            <p class="text-gray-400 font-medium">Tools</p>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="skill-tag text-xs px-3 py-1 rounded-full text-white font-medium">Git</span>
+                            <span class="skill-tag text-xs px-3 py-1 rounded-full text-white font-medium">Postman</span>
+                            <span class="skill-tag text-xs px-3 py-1 rounded-full text-white font-medium">Cursor</span>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <!-- Education -->
-            <div>
-                <h2 class="text-2xl font-bold mb-4 text-blue-400">Education</h2>
-                <div class="space-y-2">
-                    <p>Bachelor's Degree - KNIT Sultanpur (2024-2028)</p>
-                    <p>Class 12th CBSE - 2023</p>
-                    <p>Class 10th CBSE - 2021</p>
+            <div data-aos="fade-left" data-aos-delay="200">
+                <h2 class="text-3xl font-bold mb-8 text-gradient">Education</h2>
+                <div class="space-y-4">
+                    <div class="glass-effect p-6 rounded-xl hover-lift">
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
+                                
+                                <i data-feather="graduation-cap" class="w-6 h-6 text-white"></i>
+                            </div>
+                            <div>
+                                <p class="text-lg font-semibold text-white">Bachelor's Degree</p>
+                                <p class="text-gray-400">KNIT Sultanpur</p>
+                                <p class="text-sm text-blue-400">2024-2028</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="glass-effect p-6 rounded-xl hover-lift">
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
+                                <i data-feather="book-open" class="w-6 h-6 text-white"></i>
+                            </div>
+                            <div>
+                                <p class="text-lg font-semibold text-white">Class 12th CBSE</p>
+                                <p class="text-gray-400">Higher Secondary Education</p>
+                                <p class="text-sm text-green-400">2023</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="glass-effect p-6 rounded-xl hover-lift">
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
+                                <i data-feather="award" class="w-6 h-6 text-white"></i>
+                            </div>
+                            <div>
+                                <p class="text-lg font-semibold text-white">Class 10th CBSE</p>
+                                <p class="text-gray-400">Secondary Education</p>
+                                <p class="text-sm text-purple-400">2021</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Achievements -->
-        <section>
-            <h2 class="text-2xl font-bold mb-4 text-blue-400">Achievements</h2>
-            <ul class="list-disc list-inside text-gray-400 space-y-2">
-                <li>Secured 1st position in a vibe coding hackathon in college</li>
-                <li>Reported security vulnerabilities in tech organizations including python.org</li>
-                <li>Secured top ranks in college events (Web Dev, ML and Robotics)</li>
-            </ul>
+        <section data-aos="fade-up" data-aos-delay="300">
+            <h2 class="text-3xl font-bold mb-8 text-center text-gradient">Achievements</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="glass-effect p-6 rounded-xl text-center group hover:transform hover:scale-105 transition-all duration-300">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center">
+                        <i data-feather="award" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <p class="text-gray-300">Secured multiple top positions in hackathons in college</p>
+                </div>
+                <div class="glass-effect p-6 rounded-xl text-center group hover:transform hover:scale-105 transition-all duration-300">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-red-400 to-pink-500 rounded-full flex items-center justify-center">
+                        <i data-feather="shield" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <p class="text-gray-300">Reported security vulnerabilities in tech organizations including python.org, Cambridge University, and more</p>
+                </div>
+                <div class="glass-effect p-6 rounded-xl text-center group hover:transform hover:scale-105 transition-all duration-300">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-green-400 to-blue-500 rounded-full flex items-center justify-center">
+                        <i data-feather="trending-up" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <p class="text-gray-300">Secured top ranks in college events (Web Dev, ML and Robotics)</p>
+                </div>
+            </div>
         </section>
     </div>
 
     <script>
-        feather.replace()
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+        
+        // Initialize Feather Icons
+        feather.replace();
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
     </script>
 </body>
 
