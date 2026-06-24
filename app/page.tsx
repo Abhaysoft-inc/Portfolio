@@ -1,4 +1,6 @@
-﻿import Link from "next/link";
+import Link from "next/link";
+import Image from "next/image";
+import { ExperienceItem } from "@/components/ExperienceItem";
 import {
   FaArrowRight,
   FaChevronDown,
@@ -8,6 +10,17 @@ import {
   FaLinkedin,
   FaTwitter,
 } from "react-icons/fa";
+import {
+  SiNextdotjs,
+  SiWebrtc,
+  SiFfmpeg,
+  SiDocker,
+  SiGo,
+  SiGit,
+  SiTypescript,
+  SiPrisma,
+  SiPostgresql,
+} from "react-icons/si";
 
 export default function Home() {
   return (
@@ -37,7 +50,7 @@ export default function Home() {
             <div className="flex items-center justify-between pt-4">
               <div className="flex items-center gap-5">
                 <a href="https://github.com/Abhaysoft-inc" target="_blank" rel="noopener noreferrer" className="text-zinc-500 hover:text-white transition-colors text-xl"><FaGithub /></a>
-                <a href="https://twitter.com/_abhayvis" target="_blank" rel="noopener noreferrer" className="text-zinc-500 hover:text-white transition-colors text-xl"><FaTwitter /></a>
+                <a href="https://twitter.com/abhayofc" target="_blank" rel="noopener noreferrer" className="text-zinc-500 hover:text-white transition-colors text-xl"><FaTwitter /></a>
                 <a href="mailto:abhay.24305@knit.ac.in" className="text-zinc-500 hover:text-white transition-colors text-xl">
                   <FaEnvelope />
                 </a>
@@ -55,24 +68,48 @@ export default function Home() {
           <h2 className="text-2xl font-bold text-white tracking-tight">Work Experience</h2>
 
           <div className="space-y-0 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-zinc-800 before:to-transparent">
-            {/* Experience Item 1 */}
-            <div className="relative flex items-center group py-4">
-              <div className="absolute left-0 flex items-center justify-center w-10 h-10 rounded-full border border-white/10 bg-[#111315] text-white shadow z-10 shrink-0">
-                <div className="w-5 h-5 rounded-full border-[3px] border-blue-500"></div>
-              </div>
-              <div className="w-full pl-16 flex justify-between items-center border-b border-white/5 pb-6 hover:border-white/10 transition-colors">
-                <div className="flex flex-col space-y-1">
-                  <span className="text-xs text-zinc-500 font-medium">2026</span>
-                  <h3 className="text-lg font-bold text-zinc-200">Backend Developer - Effulgence'26</h3>
-                  <span className="text-sm text-zinc-400">KNIT Sultanpur</span>
-                </div>
-                <div className="px-4">
-                  <FaChevronDown className="text-zinc-500" />
-                </div>
-              </div>
-            </div>
+            <ExperienceItem
+              year="2026"
+              title="Software Engineering Intern – HITAI"
+              company="Remote, London, UK"
+              logoUrl="/logos/hitai.png"
+              logoAlt="HITAI"
+              descriptionItems={[
+                "Built a low-latency video streaming pipeline using Python, FastAPI, and WebRTC for real-time combat sports broadcasts.",
+                "Engineered infrastructure to ingest live boxing event streams, process video through ML/CV services, and deliver analyzed streams back to viewers with minimal latency.",
+                "Developed backend APIs and streaming services for reliable real-time video ingestion, processing, and distribution.",
+                "Optimized media delivery workflows and request handling to improve stream stability during live events."
+              ]}
+            />
 
+            <ExperienceItem
+              year="2026"
+              title="Full Stack Developer Intern – OGCollege"
+              company="Remote"
+              logoUrl="/logos/ogcollege.svg"
+              logoAlt="OGCollege"
+              descriptionItems={[
+                "Contributed to a production platform built with TypeScript, PostgreSQL, and Redis.",
+                "Merged 15+ pull requests across product features, backend services, and platform improvements.",
+                "Implemented feature paywalls and access-control mechanisms that contributed to 100% increase in revenue.",
+                "Collaborated on scalable backend systems and performance improvements for a growing user base."
+              ]}
+            />
 
+            <ExperienceItem
+              year="2026"
+              title="Backend Developer - Effulgence'26"
+              company="KNIT Sultanpur"
+              logoUrl="/logos/effulgence.png"
+              logoAlt="Effulgence"
+              descriptionItems={[
+                "Engineered backend infrastructure supporting 1000+ users with high availability and minimal downtime.",
+                "Architected RESTful APIs and optimized database workflows handling 5000+ registrations.",
+                "Implemented secure authentication and user management systems, reducing manual coordination by 70%.",
+                "Reduced API response time by 35% through query optimization and efficient database design.",
+                "Improved system reliability during peak traffic through efficient request handling and performance tuning."
+              ]}
+            />
           </div>
           <div className="flex justify-end pt-2">
             <Link href="/experience" className="flex items-center gap-2 text-sm font-medium text-zinc-400 hover:text-white transition-colors group">
@@ -87,47 +124,67 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {/* Project Card 1 */}
-            <div className="bg-[#1c2024] rounded-2xl p-6 border border-white/5 hover:border-white/10 transition-colors flex flex-col h-full group">
-              <div className="flex items-start justify-between mb-4">
-                <h3 className="text-lg font-bold text-zinc-200 group-hover:text-emerald-400 transition-colors">StreamXT</h3>
-                <FaExternalLinkAlt className="w-5 h-5 text-zinc-500 group-hover:text-white transition-colors" />
+            <div className="bg-[#1c2024] rounded-2xl border border-white/5 hover:border-white/10 transition-colors flex flex-col h-full group overflow-hidden">
+              <div className="relative w-full h-48 bg-zinc-800 border-b border-white/5 shrink-0 overflow-hidden">
+                <Image src="/projects/streamxt.jpg" alt="StreamXT Project" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover group-hover:scale-105 transition-transform duration-500" />
               </div>
-              <p className="text-zinc-400 text-sm flex-grow mb-6 leading-relaxed">
-                Low-latency streaming platform enabling real-time broadcasting with sub-second delay using WebRTC, Next.js, and FFmpeg.
-              </p>
-              <div className="flex items-center gap-2 mt-auto">
-                <div className="w-7 h-7 rounded-full bg-[#252a30] flex items-center justify-center text-[10px] font-bold">N</div>
-                <div className="w-7 h-7 rounded-full bg-[#252a30] flex items-center justify-center text-[10px] font-bold text-blue-500">🐳</div>
+              <div className="p-6 flex flex-col flex-grow">
+                <div className="flex items-start justify-between mb-4">
+                  <h3 className="text-lg font-bold text-zinc-200 group-hover:text-emerald-400 transition-colors">StreamXT</h3>
+                  <FaExternalLinkAlt className="w-5 h-5 text-zinc-500 group-hover:text-white transition-colors" />
+                </div>
+                <p className="text-zinc-400 text-sm flex-grow mb-6 leading-relaxed">
+                  Low-latency streaming platform enabling real-time broadcasting with sub-second delay using WebRTC, Next.js, and FFmpeg.
+                </p>
+                <div className="flex items-center gap-3 mt-auto">
+                  <SiNextdotjs className="w-5 h-5 text-zinc-400" />
+                  <SiWebrtc className="w-5 h-5 text-emerald-400" />
+                  <SiFfmpeg className="w-5 h-5 text-green-500" />
+                  <SiDocker className="w-5 h-5 text-blue-500" />
+                </div>
               </div>
             </div>
 
             {/* Project Card 2 */}
-            <div className="bg-[#1c2024] rounded-2xl p-6 border border-white/5 hover:border-white/10 transition-colors flex flex-col h-full group">
-              <div className="flex items-start justify-between mb-4">
-                <h3 className="text-lg font-bold text-zinc-200 group-hover:text-emerald-400 transition-colors">Githall</h3>
-                <FaExternalLinkAlt className="w-5 h-5 text-zinc-500 group-hover:text-white transition-colors" />
+            <div className="bg-[#1c2024] rounded-2xl border border-white/5 hover:border-white/10 transition-colors flex flex-col h-full group overflow-hidden">
+              <div className="relative w-full h-48 bg-zinc-800 border-b border-white/5 shrink-0 overflow-hidden">
+                <Image src="/placeholder.svg" alt="Project Placeholder" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover group-hover:scale-105 transition-transform duration-500" />
               </div>
-              <p className="text-zinc-400 text-sm flex-grow mb-6 leading-relaxed">
-                Self-hosted Git server in Go and Next.js supporting 100+ repositories over HTTP. Handled raw Git HTTP protocols.
-              </p>
-              <div className="flex items-center gap-2 mt-auto">
-                <div className="w-7 h-7 rounded-full bg-[#252a30] flex items-center justify-center text-[10px] font-bold text-blue-400">GO</div>
-                <div className="w-7 h-7 rounded-full bg-[#252a30] flex items-center justify-center text-[10px] font-bold">N</div>
+              <div className="p-6 flex flex-col flex-grow">
+                <div className="flex items-start justify-between mb-4">
+                  <h3 className="text-lg font-bold text-zinc-200 group-hover:text-emerald-400 transition-colors">Githall</h3>
+                  <FaExternalLinkAlt className="w-5 h-5 text-zinc-500 group-hover:text-white transition-colors" />
+                </div>
+                <p className="text-zinc-400 text-sm flex-grow mb-6 leading-relaxed">
+                  Self-hosted Git server in Go and Next.js supporting 100+ repositories over HTTP. Handled raw Git HTTP protocols.
+                </p>
+                <div className="flex items-center gap-3 mt-auto">
+                  <SiGo className="w-5 h-5 text-blue-400" />
+                  <SiNextdotjs className="w-5 h-5 text-zinc-400" />
+                  <SiGit className="w-5 h-5 text-orange-500" />
+                </div>
               </div>
             </div>
 
             {/* Project Card 3 */}
-            <div className="bg-[#1c2024] rounded-2xl p-6 border border-white/5 hover:border-white/10 transition-colors flex flex-col h-full group">
-              <div className="flex items-start justify-between mb-4">
-                <h3 className="text-lg font-bold text-zinc-200 group-hover:text-emerald-400 transition-colors">Thatlytics</h3>
-                <FaExternalLinkAlt className="w-5 h-5 text-zinc-500 group-hover:text-white transition-colors" />
+            <div className="bg-[#1c2024] rounded-2xl border border-white/5 hover:border-white/10 transition-colors flex flex-col h-full group overflow-hidden">
+              <div className="relative w-full h-48 bg-zinc-800 border-b border-white/5 shrink-0 overflow-hidden">
+                <Image src="/placeholder.svg" alt="Project Placeholder" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover group-hover:scale-105 transition-transform duration-500" />
               </div>
-              <p className="text-zinc-400 text-sm flex-grow mb-6 leading-relaxed">
-                Analytics platform processing 10k+ events/day with real-time dashboards utilizing Prisma and PostgreSQL.
-              </p>
-              <div className="flex items-center gap-2 mt-auto">
-                <div className="w-7 h-7 rounded-full bg-[#252a30] flex items-center justify-center text-[10px] font-bold text-blue-400">TS</div>
-                <div className="w-7 h-7 rounded-full bg-[#252a30] flex items-center justify-center text-[10px] font-bold text-blue-300">Pg</div>
+              <div className="p-6 flex flex-col flex-grow">
+                <div className="flex items-start justify-between mb-4">
+                  <h3 className="text-lg font-bold text-zinc-200 group-hover:text-emerald-400 transition-colors">Thatlytics</h3>
+                  <FaExternalLinkAlt className="w-5 h-5 text-zinc-500 group-hover:text-white transition-colors" />
+                </div>
+                <p className="text-zinc-400 text-sm flex-grow mb-6 leading-relaxed">
+                  Analytics platform processing 10k+ events/day with real-time dashboards utilizing Prisma and PostgreSQL.
+                </p>
+                <div className="flex items-center gap-3 mt-auto">
+                  <SiTypescript className="w-5 h-5 text-blue-400" />
+                  <SiNextdotjs className="w-5 h-5 text-zinc-400" />
+                  <SiPrisma className="w-5 h-5 text-emerald-500" />
+                  <SiPostgresql className="w-5 h-5 text-blue-300" />
+                </div>
               </div>
             </div>
           </div>
@@ -145,14 +202,17 @@ export default function Home() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="relative group overflow-hidden rounded-2xl aspect-[16/9] bg-zinc-800 flex items-end p-6 border border-white/5">
+              <Image src="/achivements/rift.jpeg" alt="RIFT Hackathon 2026" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover group-hover:scale-105 transition-transform duration-500" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent z-10"></div>
               <h3 className="font-bold text-lg md:text-xl text-white z-20 relative">Winner @ RIFT Hackathon 2026</h3>
             </div>
             <div className="relative group overflow-hidden rounded-2xl aspect-[16/9] bg-zinc-800 flex items-end p-6 border border-white/5">
+              <Image src="/achivements/hackwithup.jpeg" alt="HackWithUP" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover group-hover:scale-105 transition-transform duration-500" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent z-10"></div>
               <h3 className="font-bold text-lg md:text-xl text-white z-20 relative">Runner Up @ HackWithUP</h3>
             </div>
             <div className="relative group overflow-hidden rounded-2xl aspect-[16/9] bg-zinc-800 flex items-end p-6 border border-white/5">
+              <Image src="/achivements/nasa-sac.jpeg" alt="NASA Space Apps" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover group-hover:scale-105 transition-transform duration-500" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent z-10"></div>
               <h3 className="font-bold text-lg md:text-xl text-white z-20 relative">3rd Place @ NASA Space Apps</h3>
             </div>
