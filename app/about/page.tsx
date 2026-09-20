@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { FaAws, FaDocker, FaEnvelope, FaGithub, FaGitAlt, FaLinkedin, FaPhone } from "react-icons/fa";
 import { SiCplusplus, SiJavascript, SiMongodb, SiNextdotjs, SiNodedotjs, SiPostgresql, SiPrisma, SiReact, SiSolidity, SiTypescript, SiWebrtc } from "react-icons/si";
 import type { IconType } from "react-icons";
@@ -55,7 +56,7 @@ export default function AboutPage() {
                     </div>
                 </header>
 
-                <section className="grid gap-12 border-t border-white/5 pt-10 md:grid-cols-[1.4fr_0.8fr]">
+                <section className="grid gap-12 border-t border-white/5 pt-10 md:grid-cols-[1.3fr_0.9fr]">
                     <div className="space-y-5">
                         <h2 className="text-2xl font-bold tracking-tight text-white">A little about me</h2>
                         <div className="space-y-4 text-sm leading-relaxed text-zinc-400">
@@ -64,11 +65,25 @@ export default function AboutPage() {
                             <p>Outside of engineering, I enjoy hackathons, building communities, reverse engineering, and learning how things work.</p>
                         </div>
                     </div>
-                    <div className="h-fit space-y-3 border-l border-white/10 pl-6">
-                        <p className="text-xs font-medium uppercase tracking-wider text-zinc-500">Education</p>
-                        <h3 className="font-bold text-zinc-200">KNIT Sultanpur</h3>
-                        <p className="text-sm text-zinc-400">B.Tech in Electrical Engineering</p>
-                        <p className="text-xs text-emerald-500">Minor in AI &amp; ML · 2024 - 2028</p>
+                    <div className="space-y-6 md:border-l md:border-white/10 md:pl-6">
+                        <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl border border-white/10 bg-zinc-800 shadow-xl group">
+                            <Image
+                                src="/about-me.jpeg"
+                                alt="Abhay hacking at a hackathon"
+                                fill
+                                sizes="(max-width: 768px) 100vw, 320px"
+                                className="object-cover object-[center_35%] group-hover:scale-105 transition-transform duration-500"
+                                priority
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                        </div>
+
+                        <div className="h-fit space-y-3 pt-2 border-t border-white/5 md:border-t-0">
+                            <p className="text-xs font-medium uppercase tracking-wider text-zinc-500">Education</p>
+                            <h3 className="font-bold text-zinc-200">KNIT Sultanpur</h3>
+                            <p className="text-sm text-zinc-400">B.Tech in Electrical Engineering</p>
+                            <p className="text-xs text-emerald-500">Minor in AI &amp; ML · 2024 - 2028</p>
+                        </div>
                     </div>
                 </section>
 
