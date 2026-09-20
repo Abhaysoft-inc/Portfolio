@@ -199,7 +199,7 @@ export function CalendarHeatmap({
         empty={{ title: 'No activity yet', description: 'The grid fills in as daily events are recorded.' }}
         onRetry={onRetry}
       >
-      <div className="relative w-full overflow-x-auto">
+      <div className="relative w-full overflow-x-auto no-scrollbar [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
         {!ready ? null : (
           <svg
             width={w}

@@ -76,7 +76,7 @@ export default function ExperiencePage() {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="relative group overflow-hidden rounded-2xl aspect-[16/9] bg-zinc-800 flex items-end p-6 border border-white/5">
-                        <Image src="/achivements/rift.jpeg" alt="RIFT 2026 Hackathon" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover group-hover:scale-105 transition-transform duration-500" />
+                        <Image src="/achivements/rift-winner.jpeg" alt="RIFT 2026 Hackathon" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover group-hover:scale-105 transition-transform duration-500" />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent z-10"></div>
                         <h3 className="font-bold text-sm md:text-base text-white z-20 relative">1st Place - RIFT 2026 Hackathon</h3>
                     </div>
