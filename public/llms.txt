@@ -1,0 +1,57 @@
+# Abhay Vishwakarma — Software Engineer & Backend Developer
+
+> Software engineer building robust backend systems, AI-powered platforms, RESTful APIs, and real-time streaming architectures. B.Tech student in Electrical Engineering with an AI/ML Minor at KNIT Sultanpur (2024–2028).
+
+## Overview
+- Full Name: Abhay Vishwakarma
+- Role: Software Engineer | Backend & AI Developer | Full Stack Developer
+- Location: India
+- Portfolio: https://abhayvis.vercel.app
+- GitHub: https://github.com/Abhaysoft-inc
+- LinkedIn: https://linkedin.com/in/abhayvis
+- Twitter / X: https://twitter.com/abhayofc
+- Email: abhay.24305@knit.ac.in
+- Phone: +91 8948041722
+- Medium Blog: https://abhayvis.medium.com
+
+## Featured Projects
+
+- [StreamXT](https://github.com/Abhaysoft-inc/streamxt): Low-latency WebRTC streaming platform enabling real-time broadcasting with sub-second delay (under 1s). Built using Next.js, WebRTC, FFmpeg, and Docker with parallel local recording via MediaRecorder API.
+- [Curalynx](https://curalynx.me) ([GitHub](https://github.com/ishaancreates/CuralynX)): AI-powered clinical documentation platform converting doctor-patient conversations into structured SOAP notes and EHR summaries. Backend engineered with FastAPI, Whisper / Faster-Whisper, speaker diarization, RAG (Retrieval-Augmented Generation), and PostgreSQL.
+- [Githall](https://github.com/Abhaysoft-inc/githall): Self-hosted Git server built in Go and Next.js supporting 100+ repositories over HTTP. Handled raw Git HTTP protocols (git-http-backend, go-git) and RESTful management APIs via Gin.
+- [Thatlytics](https://github.com/Abhaysoft-inc/thatlytics): Analytics platform processing 10k+ events/day with real-time analytics dashboards using TypeScript, Next.js, Prisma, and PostgreSQL.
+
+## Work Experience
+
+- **SDE Intern at OGCollege** (May 2026 – Present | Remote):
+  - Contributed to production TypeScript, PostgreSQL, and Redis stack.
+  - Merged 15+ pull requests across product features, backend services, and platform improvements.
+  - Implemented feature paywalls and access-control mechanisms contributing to 100% revenue growth.
+- **Software Engineering Intern at HITAI** (May 2026 – July 2026 | Remote, London, UK):
+  - Built low-latency video streaming pipeline using Python, FastAPI, and WebRTC for real-time combat sports broadcasts.
+  - Engineered ingestion infrastructure for live boxing streams and ML/CV model outputs.
+- **Backend Developer at Effulgence'26** (Jan 2026 – March 2026 | KNIT Sultanpur):
+  - Engineered backend infrastructure supporting 1000+ users with high availability and minimal downtime.
+  - Designed RESTful APIs handling 5000+ registrations and reduced API response times by 35%.
+
+## Key Achievements & Hackathons
+
+- **1st Place Winner — RIFT Hackathon 2026** (500+ teams, 1 Lakh INR prize): Built an AI-based pharmacogenomic analyzer and led backend systems.
+- **2nd Place Runner Up — HackWithUP Hackathon** (300+ teams): Built an AI-powered medical scribe for Indic languages.
+- **3rd Place — NASA Space Apps Challenge 2025** (30+ teams).
+- **Responsible Cybersecurity Disclosures**: Identified critical security vulnerabilities including subdomain takeover in python.org and SQL injection in Cambridge systems.
+
+## Technical Skills
+
+- **Languages**: TypeScript, JavaScript, Python, Go, C++, Solidity, SQL
+- **Frameworks & Libraries**: FastAPI, Next.js, React, Node.js, WebRTC, Tailwind CSS
+- **Databases & ORMs**: PostgreSQL, MongoDB, Redis, Prisma
+- **DevOps & Cloud**: Docker, AWS, Git, CI/CD, FFmpeg
+- **AI / ML**: Whisper, Faster-Whisper, Speaker Diarization, Retrieval-Augmented Generation (RAG), LLM APIs
+
+## Site Pages
+- [Homepage](https://abhayvis.vercel.app/)
+- [About Me](https://abhayvis.vercel.app/about)
+- [Projects](https://abhayvis.vercel.app/projects)
+- [Experience](https://abhayvis.vercel.app/experience)
+- [Blogs](https://abhayvis.vercel.app/blogs)

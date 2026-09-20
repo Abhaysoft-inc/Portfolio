@@ -15,6 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://abhayvis.vercel.app"),
   title: "Portfolio",
   description: "My developer portfolio",
   verification: {

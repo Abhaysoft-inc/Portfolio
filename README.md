@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Abhay Vishwakarma
 
-## Getting Started
+> Software engineer focused on backend systems, AI products, and real-time applications. Currently pursuing B.Tech in Electrical Engineering with an AI/ML minor at [KNIT Sultanpur](https://knit.ac.in).
 
-First, run the development server:
+[![Portfolio](https://img.shields.io/badge/Portfolio-abhayvis.vercel.app-10b981?style=flat-square)](https://abhayvis.vercel.app)
+[![GitHub](https://img.shields.io/badge/GitHub-Abhaysoft--inc-181717?style=flat-square&logo=github)](https://github.com/Abhaysoft-inc)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-abhayvis-0A66C2?style=flat-square&logo=linkedin)](https://linkedin.com/in/abhayvis)
+[![Twitter](https://img.shields.io/badge/X-@abhayofc-000000?style=flat-square&logo=x)](https://twitter.com/abhayofc)
+
+---
+
+## About Me
+
+I enjoy building things that work reliably under the hood — whether that's low-latency streaming pipelines, AI-assisted tools, or clean REST APIs. I spend most of my time working across Python, TypeScript, and Go, exploring how distributed systems handle load, and participating in hackathons with friends.
+
+- 🎓 **Education**: B.Tech in Electrical Engineering (Minor in AI & ML), KNIT Sultanpur (2024–2028)
+- 💼 **Experience**: SDE Intern at OGCollege · Ex-Software Engineering Intern at HITAI
+- 🏆 **Hackathons**: 1st Place at RIFT Hackathon 2026 · 2nd Place at HackWithUP · 3rd Place at NASA Space Apps 2025
+- 🔍 **Interests**: Distributed systems, real-time media (WebRTC/FFmpeg), applied LLMs/RAG, and reverse engineering
+
+---
+
+## Featured Projects
+
+| Project | Description | Stack | Links |
+| :--- | :--- | :--- | :--- |
+| **Curalynx** | AI clinical documentation tool that transcribes doctor-patient audio and generates structured SOAP notes. | FastAPI, Whisper, RAG, PostgreSQL | [Live Demo](https://curalynx.me) · [GitHub](https://github.com/ishaancreates/CuralynX) |
+| **StreamXT** | Low-latency WebRTC broadcasting platform with sub-second delay and parallel recording pipeline. | Next.js, WebRTC, FFmpeg, Docker | [GitHub](https://github.com/Abhaysoft-inc/streamxt) |
+| **Githall** | Lightweight self-hosted Git server in Go supporting repository provisioning and Git HTTP protocols. | Go, Gin, go-git, Next.js | [GitHub](https://github.com/Abhaysoft-inc/githall) |
+| **Thatlytics** | Analytics platform processing 10k+ daily events with real-time query dashboards. | TypeScript, Prisma, PostgreSQL | [GitHub](https://github.com/Abhaysoft-inc/thatlytics) |
+
+---
+
+## Tech Stack
+
+- **Languages**: TypeScript, JavaScript, Python, Go, C++, SQL
+- **Backend & Frameworks**: FastAPI, Next.js, Node.js, Express, Gin
+- **Databases**: PostgreSQL, MongoDB, Redis, Prisma ORM
+- **Tools & DevOps**: Docker, Git, Linux, WebRTC, FFmpeg, AWS basics
+
+---
+
+## About This Repository
+
+This repo contains the source code for my personal portfolio website, built with **Next.js** and **Tailwind CSS**.
+
+### Running Locally
 
 ```bash
+# 1. Clone the repository
+git clone https://github.com/Abhaysoft-inc/Portfolio.git
+
+# 2. Install dependencies
+cd Portfolio
+npm install
+
+# 3. Start local development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Contact
 
-## Learn More
+Feel free to reach out if you want to chat about backend systems, hackathons, or collaborate on a project:
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Email**: [abhay.24305@knit.ac.in](mailto:abhay.24305@knit.ac.in)
+- **Twitter / X**: [@abhayofc](https://twitter.com/abhayofc)
+- **LinkedIn**: [linkedin.com/in/abhayvis](https://linkedin.com/in/abhayvis)
