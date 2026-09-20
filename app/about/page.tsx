@@ -1,7 +1,8 @@
 import { FaAws, FaDocker, FaEnvelope, FaGithub, FaGitAlt, FaLinkedin, FaPhone } from "react-icons/fa";
 import { SiCplusplus, SiJavascript, SiMongodb, SiNextdotjs, SiNodedotjs, SiPostgresql, SiPrisma, SiReact, SiSolidity, SiTypescript, SiWebrtc } from "react-icons/si";
+import type { IconType } from "react-icons";
 
-const skillGroups = [
+const skillGroups: { title: string; skills: [string, IconType][] }[] = [
     {
         title: "Languages",
         skills: [
