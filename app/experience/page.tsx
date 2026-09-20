@@ -13,7 +13,21 @@ export default function ExperiencePage() {
 
                 <div className="space-y-0 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-zinc-800 before:to-transparent">
                     <ExperienceItem
-                      year="2026"
+                      year="May 2026 – Present"
+                      title="SDE Intern – OGCollege"
+                      company="Remote"
+                      logoUrl="/logos/ogcollege.svg"
+                      logoAlt="OGCollege"
+                      descriptionItems={[
+                        "Contributed to a production platform built with TypeScript, PostgreSQL, and Redis.",
+                        "Merged 15+ pull requests across product features, backend services, and platform improvements.",
+                        "Implemented feature paywalls and access-control mechanisms that contributed to 100% increase in revenue.",
+                        "Collaborated on scalable backend systems and performance improvements for a growing user base."
+                      ]}
+                    />
+
+                    <ExperienceItem
+                      year="May 2026 – July 2026"
                       title="Software Engineering Intern – HITAI"
                       company="Remote, London, UK"
                       logoUrl="/logos/hitai.png"
@@ -27,21 +41,7 @@ export default function ExperiencePage() {
                     />
 
                     <ExperienceItem
-                      year="2026"
-                      title="Full Stack Developer Intern – OGCollege"
-                      company="Remote"
-                      logoUrl="/logos/ogcollege.svg"
-                      logoAlt="OGCollege"
-                      descriptionItems={[
-                        "Contributed to a production platform built with TypeScript, PostgreSQL, and Redis.",
-                        "Merged 15+ pull requests across product features, backend services, and platform improvements.",
-                        "Implemented feature paywalls and access-control mechanisms that contributed to 100% increase in revenue.",
-                        "Collaborated on scalable backend systems and performance improvements for a growing user base."
-                      ]}
-                    />
-
-                    <ExperienceItem
-                      year="2026"
+                      year="Jan 2026 – March 2026"
                       title="Backend Developer - Effulgence'26"
                       company="KNIT Sultanpur"
                       logoUrl="/logos/effulgence.png"

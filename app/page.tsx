@@ -3,7 +3,6 @@ import Image from "next/image";
 import { ExperienceItem } from "@/components/ExperienceItem";
 import {
   FaArrowRight,
-  FaChevronDown,
   FaEnvelope,
   FaExternalLinkAlt,
   FaGithub,
@@ -30,15 +29,20 @@ export default function Home() {
 
         {/* Hero Section */}
         <section id="about" className="space-y-8 animate-fade-in">
-          {/* Cover image placeholder */}
-          <div className="w-full h-48 md:h-64 bg-zinc-800 rounded-2xl overflow-hidden relative border border-white/5 flex items-center justify-center">
-            <div className="absolute inset-0 bg-gradient-to-tr from-zinc-800 to-zinc-700 opacity-50"></div>
-            <span className="text-zinc-500 z-10 font-bold">Cover Image</span>
+          <div className="w-full h-48 md:h-64 bg-zinc-800 rounded-2xl overflow-hidden relative border border-white/5">
+            <Image
+              src="/hero.gif"
+              alt="Abhay's portfolio hero"
+              fill
+              sizes="(max-width: 768px) 100vw, 768px"
+              className="object-cover"
+              priority
+            />
           </div>
 
           <div className="space-y-4">
             <h1 className="text-4xl md:text-5xl font-bold text-white tracking-tight">
-              Hey, I'm <span className="text-red-500">Abhay</span>
+              Hey, I&apos;m <span className="text-red-500">Abhay</span>
             </h1>
             <p className="text-sm font-medium text-emerald-500 flex flex-wrap gap-2 items-center">
               Engineer • Full Stack Developer • Tech Enthusiast
@@ -69,7 +73,21 @@ export default function Home() {
 
           <div className="space-y-0 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-zinc-800 before:to-transparent">
             <ExperienceItem
-              year="2026"
+              year="May 2026 – Present"
+              title="SDE Intern – OGCollege"
+              company="Remote"
+              logoUrl="/logos/ogcollege.svg"
+              logoAlt="OGCollege"
+              descriptionItems={[
+                "Contributed to a production platform built with TypeScript, PostgreSQL, and Redis.",
+                "Merged 15+ pull requests across product features, backend services, and platform improvements.",
+                "Implemented feature paywalls and access-control mechanisms that contributed to 100% increase in revenue.",
+                "Collaborated on scalable backend systems and performance improvements for a growing user base."
+              ]}
+            />
+
+            <ExperienceItem
+              year="May 2026 – July 2026"
               title="Software Engineering Intern – HITAI"
               company="Remote, London, UK"
               logoUrl="/logos/hitai.png"
@@ -83,21 +101,7 @@ export default function Home() {
             />
 
             <ExperienceItem
-              year="2026"
-              title="Full Stack Developer Intern – OGCollege"
-              company="Remote"
-              logoUrl="/logos/ogcollege.svg"
-              logoAlt="OGCollege"
-              descriptionItems={[
-                "Contributed to a production platform built with TypeScript, PostgreSQL, and Redis.",
-                "Merged 15+ pull requests across product features, backend services, and platform improvements.",
-                "Implemented feature paywalls and access-control mechanisms that contributed to 100% increase in revenue.",
-                "Collaborated on scalable backend systems and performance improvements for a growing user base."
-              ]}
-            />
-
-            <ExperienceItem
-              year="2026"
+              year="Jan 2026 – March 2026"
               title="Backend Developer - Effulgence'26"
               company="KNIT Sultanpur"
               logoUrl="/logos/effulgence.png"
