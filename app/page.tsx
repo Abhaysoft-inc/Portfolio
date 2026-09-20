@@ -27,7 +27,7 @@ export default async function Home() {
   const githubContributions = (await getGithubContributions()) ?? CONTRIBUTIONS;
 
   return (
-    <div className="min-h-screen bg-[#111315] text-zinc-300 font-sans selection:bg-red-500/30 w-full overflow-x-hidden pt-32 pb-24">
+    <div className="min-h-screen bg-[#0d0f10] text-zinc-300 font-sans selection:bg-red-500/30 w-full overflow-x-hidden pt-32 pb-24">
 
       <main className="max-w-3xl mx-auto px-6 space-y-24">
 

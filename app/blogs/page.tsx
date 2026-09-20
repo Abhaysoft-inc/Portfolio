@@ -38,7 +38,7 @@ const posts = [
 
 export default function BlogsPage() {
     return (
-        <main className="min-h-screen w-full !bg-[#111315] px-6 pb-24 pt-32 text-zinc-300 selection:bg-red-500/30">
+        <main className="min-h-screen w-full !bg-[#0d0f10] px-6 pb-24 pt-32 text-zinc-300 selection:bg-red-500/30">
             <div className="mx-auto max-w-3xl space-y-24">
             <section className="space-y-8">
                 <div className="flex items-center justify-between">

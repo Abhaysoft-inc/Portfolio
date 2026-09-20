@@ -16,8 +16,8 @@ export function Footer() {
     }, []);
 
     return (
-        <footer className="mx-auto w-full max-w-3xl px-6 pb-12 pt-20 text-sm text-zinc-500">
-            <div className="space-y-16">
+        <footer className="w-full bg-[#0d0f10] px-6 pb-12 pt-20 text-sm text-zinc-500">
+            <div className="mx-auto max-w-3xl space-y-16">
                 <div className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
                     <div className="space-y-3">
                         <p className="text-lg text-zinc-300"># let&apos;s build something</p>

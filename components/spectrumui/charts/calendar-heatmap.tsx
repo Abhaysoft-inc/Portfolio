@@ -158,7 +158,7 @@ export function CalendarHeatmap({
       className={cn(
         'flex w-full flex-col text-neutral-400 dark:text-neutral-500',
         seriesVarsClassName,
-        compact && '[--spectrum-track:#161b22] [--spectrum-chart-surface:#111315]',
+        compact && '[--spectrum-track:#161b22] [--spectrum-chart-surface:#0d0f10]',
         className,
       )}
     >

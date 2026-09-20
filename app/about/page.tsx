@@ -37,7 +37,7 @@ const skillGroups: { title: string; skills: [string, IconType][] }[] = [
 
 export default function AboutPage() {
     return (
-        <main className="min-h-screen w-full bg-[#111315] px-6 pb-24 pt-32 text-zinc-300">
+        <main className="min-h-screen w-full bg-[#0d0f10] px-6 pb-24 pt-32 text-zinc-300">
             <div className="mx-auto max-w-3xl space-y-16">
                 <header className="space-y-5">
                     <p className="text-sm font-medium text-emerald-500">About</p>

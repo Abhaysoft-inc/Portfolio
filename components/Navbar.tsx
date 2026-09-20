@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { FaBookOpen, FaBriefcase, FaFolder, FaHome, FaMoon, FaUser } from "react-icons/fa";
+import { FaBookOpen, FaBriefcase, FaFolder, FaHome, FaUser } from "react-icons/fa";
 
 export default function Navbar() {
     const pathname = usePathname();
@@ -28,7 +28,6 @@ export default function Navbar() {
                 <Link href="/blogs" className={`flex items-center gap-2 px-2 py-1 rounded-md transition-colors shrink-0 ${isActive("/blogs")}`}>
                     <FaBookOpen /> <span className="hidden sm:inline">Blogs</span>
                 </Link>
-                <button className="p-1 hover:text-white transition-colors ml-1 md:ml-2 shrink-0 text-zinc-400"><FaMoon /></button>
             </div>
         </nav>
     );
