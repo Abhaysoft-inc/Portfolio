@@ -11,6 +11,7 @@ interface ExperienceItemProps {
   logoUrl: string;
   logoAlt: string;
   descriptionItems?: string[];
+  logoClassName?: string;
 }
 
 export function ExperienceItem({
@@ -20,6 +21,7 @@ export function ExperienceItem({
   logoUrl,
   logoAlt,
   descriptionItems,
+  logoClassName,
 }: ExperienceItemProps) {
   const [isExpanded, setIsExpanded] = useState(false);
 
@@ -38,7 +40,7 @@ export function ExperienceItem({
           alt={logoAlt}
           width={40}
           height={40}
-          className="w-full h-full object-contain"
+          className={`w-full h-full object-contain ${logoClassName || ""}`}
         />
       </div>
 

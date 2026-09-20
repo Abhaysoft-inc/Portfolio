@@ -21,6 +21,9 @@ import {
   SiTypescript,
   SiPrisma,
   SiPostgresql,
+  SiFastapi,
+  SiPython,
+  SiOpenai,
 } from "react-icons/si";
 
 export default async function Home() {
@@ -49,10 +52,10 @@ export default async function Home() {
               Hey, I&apos;m <span className="text-red-500">Abhay</span>
             </h1>
             <p className="text-sm font-medium text-emerald-500 flex flex-wrap gap-2 items-center">
-              Engineer • Full Stack Developer • Tech Enthusiast
+              Software Engineer • Backend &amp; AI Developer • Full Stack Developer
             </p>
             <p className="text-zinc-400 leading-relaxed max-w-2xl text-[17px]">
-              I am a <strong className="text-zinc-200">software engineer</strong> who is passionate about scale and reliability. I love to build and reverse engineer everything I see. I love hackathons, building communities and arguing about tech.
+              I build <strong className="text-zinc-200">backend systems</strong>, <strong className="text-zinc-200">AI-powered products</strong>, and <strong className="text-zinc-200">full-stack applications</strong>. I work across APIs, data pipelines, AI, and real-time systems, and enjoy reverse engineering and breaking things apart to understand how they work.
             </p>
 
             <div className="flex items-center justify-between pt-4">
@@ -102,10 +105,9 @@ export default async function Home() {
               logoUrl="/logos/hitai.png"
               logoAlt="HITAI"
               descriptionItems={[
-                "Built a low-latency video streaming pipeline using Python, FastAPI, and WebRTC for real-time combat sports broadcasts.",
-                "Engineered infrastructure to ingest live boxing event streams, process video through ML/CV services, and deliver analyzed streams back to viewers with minimal latency.",
-                "Developed backend APIs and streaming services for reliable real-time video ingestion, processing, and distribution.",
-                "Optimized media delivery workflows and request handling to improve stream stability during live events."
+                "Developed a Python-based dashboard to manage clients and monitor live video streams processed through ML/CV models.",
+                "Built interfaces for viewing real-time model outputs and analyzed video streams, enabling clients to monitor ongoing live events.",
+                "Integrated streaming status and model-generated results into a centralized dashboard for real-time monitoring and operations."
               ]}
             />
 
@@ -115,6 +117,7 @@ export default async function Home() {
               company="KNIT Sultanpur"
               logoUrl="/logos/effulgence.png"
               logoAlt="Effulgence"
+              logoClassName="invert"
               descriptionItems={[
                 "Engineered backend infrastructure supporting 1000+ users with high availability and minimal downtime.",
                 "Architected RESTful APIs and optimized database workflows handling 5000+ registrations.",
@@ -158,7 +161,52 @@ export default async function Home() {
               </div>
             </a>
 
-            {/* Project Card 2 */}
+            {/* Project Card 2: Curalynx */}
+            <div className="bg-[#1c2024] rounded-2xl border border-white/5 hover:border-white/10 transition-colors flex flex-col h-full group overflow-hidden">
+              <a href="https://curalynx.me" target="_blank" rel="noopener noreferrer" className="relative w-full h-48 bg-zinc-800 border-b border-white/5 shrink-0 overflow-hidden block">
+                <Image src="/projects/curalynx.png" alt="Curalynx Project" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover group-hover:scale-105 transition-transform duration-500" />
+              </a>
+              <div className="p-6 flex flex-col flex-grow">
+                <div className="flex items-start justify-between mb-4">
+                  <div className="space-y-1">
+                    <a href="https://curalynx.me" target="_blank" rel="noopener noreferrer">
+                      <h3 className="text-lg font-bold text-zinc-200 group-hover:text-emerald-400 transition-colors">Curalynx</h3>
+                    </a>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <a
+                      href="https://github.com/ishaancreates/CuralynX"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-zinc-500 hover:text-white transition-colors"
+                      title="GitHub Repository"
+                    >
+                      <FaGithub className="w-5 h-5" />
+                    </a>
+                    <a
+                      href="https://curalynx.me"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-zinc-500 hover:text-white transition-colors"
+                      title="Live Demo"
+                    >
+                      <FaExternalLinkAlt className="w-4 h-4" />
+                    </a>
+                  </div>
+                </div>
+                <p className="text-zinc-400 text-sm flex-grow mb-6 leading-relaxed">
+                  AI-powered clinical documentation platform that converts doctor-patient conversations into structured medical notes. Led backend development using FastAPI, Whisper/Faster-Whisper, speaker diarization, and RAG.
+                </p>
+                <div className="flex items-center gap-3 mt-auto">
+                  <SiPython className="w-5 h-5 text-blue-400" title="Python" />
+                  <SiFastapi className="w-5 h-5 text-emerald-400" title="FastAPI" />
+                  <SiOpenai className="w-5 h-5 text-zinc-200" title="Whisper & AI" />
+                  <SiPostgresql className="w-5 h-5 text-blue-300" title="PostgreSQL" />
+                </div>
+              </div>
+            </div>
+
+            {/* Project Card 3 */}
             <a href="https://github.com/Abhaysoft-inc/githall" target="_blank" rel="noopener noreferrer" className="bg-[#1c2024] rounded-2xl border border-white/5 hover:border-white/10 transition-colors flex flex-col h-full group overflow-hidden">
               <div className="relative w-full h-48 bg-zinc-800 border-b border-white/5 shrink-0 overflow-hidden">
                 <Image src="/placeholder.svg" alt="Project Placeholder" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover group-hover:scale-105 transition-transform duration-500" />

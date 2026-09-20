@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { FaExternalLinkAlt } from "react-icons/fa";
+import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 
 export default function ProjectsPage() {
     return (
@@ -40,7 +40,48 @@ export default function ProjectsPage() {
                         </div>
                     </div>
 
-                    {/* Project Card 2 */}
+                    {/* Project Card 2: Curalynx */}
+                    <div className="bg-[#1c2024] rounded-2xl border border-white/5 hover:border-white/10 transition-colors flex flex-col h-full group overflow-hidden">
+                        <div className="relative w-full h-48 bg-zinc-800 shrink-0 border-b border-white/5">
+                            <Image src="/projects/curalynx.png" alt="Curalynx Project" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover group-hover:scale-105 transition-transform duration-500" />
+                        </div>
+                        <div className="p-6 flex flex-col flex-grow">
+                            <div className="flex items-start justify-between mb-2">
+                                <div className="space-y-1">
+                                    <h3 className="text-lg font-bold text-zinc-200 group-hover:text-emerald-400 transition-colors">Curalynx</h3>
+                                    <div className="flex items-center gap-2 text-xs text-zinc-500">
+                                        <span>2026</span>
+                                        <span>•</span>
+                                        <a href="https://curalynx.me" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-400 transition-colors underline decoration-zinc-700">Demo</a>
+                                        <span>•</span>
+                                        <a href="https://github.com/ishaancreates/CuralynX" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-400 transition-colors underline decoration-zinc-700">Repo</a>
+                                    </div>
+                                </div>
+                                <div className="flex items-center gap-3">
+                                    <a href="https://github.com/ishaancreates/CuralynX" target="_blank" rel="noopener noreferrer" className="text-zinc-500 hover:text-white transition-colors" title="GitHub Repository">
+                                        <FaGithub className="w-5 h-5" />
+                                    </a>
+                                    <a href="https://curalynx.me" target="_blank" rel="noopener noreferrer" className="text-zinc-500 hover:text-white transition-colors" title="Live Demo">
+                                        <FaExternalLinkAlt className="w-4 h-4" />
+                                    </a>
+                                </div>
+                            </div>
+                            <ul className="text-zinc-400 text-sm flex-grow mb-4 leading-relaxed list-disc list-outside pl-4 space-y-2">
+                                <li>AI-powered clinical documentation platform that converts doctor-patient conversations into structured medical notes.</li>
+                                <li>Led backend development using FastAPI, Whisper/Faster-Whisper, speaker diarization, and RAG.</li>
+                                <li>Implemented high-throughput audio ingestion, medical entity extraction, and structured SOAP note generation.</li>
+                            </ul>
+                            <div className="flex flex-wrap gap-2 mt-auto">
+                                {"Python, FastAPI, Whisper, RAG, PostgreSQL, AI/ML".split(", ").map((tag) => (
+                                    <span key={tag} className="px-2.5 py-1 text-xs font-medium text-emerald-400 bg-emerald-400/10 border border-emerald-400/20 rounded-md">
+                                        {tag}
+                                    </span>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Project Card 3 */}
                     <div className="bg-[#1c2024] rounded-2xl border border-white/5 hover:border-white/10 transition-colors flex flex-col h-full group overflow-hidden">
                         <div className="relative w-full h-48 bg-zinc-800 shrink-0 border-b border-white/5">
                             <Image src="/placeholder.svg" alt="Project Placeholder" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover group-hover:scale-105 transition-transform duration-500" />

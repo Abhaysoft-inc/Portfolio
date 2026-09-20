@@ -45,7 +45,7 @@ export default function AboutPage() {
                         Abhay <span className="text-red-500">Vishwakarma</span>
                     </h1>
                     <p className="max-w-2xl text-lg leading-relaxed text-zinc-400">
-                        Backend developer focused on scalable systems, reliable APIs, and products that are practical to use.
+                        Software engineer building backend systems, AI products, APIs, and practical applications.
                     </p>
                     <div className="flex flex-wrap gap-x-5 gap-y-3 pt-2 text-xs text-zinc-500">
                         <span className="flex items-center gap-2"><FaPhone className="text-emerald-500" /> +91 8948041722</span>
@@ -60,7 +60,7 @@ export default function AboutPage() {
                         <h2 className="text-2xl font-bold tracking-tight text-white">A little about me</h2>
                         <div className="space-y-4 text-sm leading-relaxed text-zinc-400">
                             <p>I enjoy building backend systems, REST APIs, data workflows, and real-time applications. I care about clear interfaces, efficient queries, and software that stays dependable as it grows.</p>
-                            <p>My recent projects include StreamXT, a low-latency WebRTC streaming platform; Githall, a self-hosted Git server; and Thatlytics, an analytics platform for real-time dashboards.</p>
+                            <p>My recent projects include Curalynx, an AI-powered clinical documentation platform; StreamXT, a low-latency WebRTC streaming platform; Githall, a self-hosted Git server; and Thatlytics, an analytics platform for real-time dashboards.</p>
                             <p>Outside of engineering, I enjoy hackathons, building communities, reverse engineering, and learning how things work.</p>
                         </div>
                     </div>
