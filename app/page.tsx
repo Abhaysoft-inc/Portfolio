@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ExperienceItem } from "@/components/ExperienceItem";
+import { CalendarHeatmap, CONTRIBUTIONS } from "@/components/spectrumui/charts/calendar-heatmap";
+import { getGithubContributions } from "@/lib/github-contributions";
 import {
   FaArrowRight,
   FaEnvelope,
@@ -21,7 +23,9 @@ import {
   SiPostgresql,
 } from "react-icons/si";
 
-export default function Home() {
+export default async function Home() {
+  const githubContributions = (await getGithubContributions()) ?? CONTRIBUTIONS;
+
   return (
     <div className="min-h-screen bg-[#111315] text-zinc-300 font-sans selection:bg-red-500/30 w-full overflow-x-hidden pt-32 pb-24">
 
@@ -65,6 +69,11 @@ export default function Home() {
               </Link>
             </div>
           </div>
+        </section>
+
+        {/* GitHub Activity */}
+        <section id="github" className="space-y-3">
+          <CalendarHeatmap data={githubContributions} hue="#10b981" label="contributions in 2026" compact />
         </section>
 
         {/* Work Experience */}
@@ -128,7 +137,7 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {/* Project Card 1 */}
-            <div className="bg-[#1c2024] rounded-2xl border border-white/5 hover:border-white/10 transition-colors flex flex-col h-full group overflow-hidden">
+            <a href="https://github.com/Abhaysoft-inc/streamxt" target="_blank" rel="noopener noreferrer" className="bg-[#1c2024] rounded-2xl border border-white/5 hover:border-white/10 transition-colors flex flex-col h-full group overflow-hidden">
               <div className="relative w-full h-48 bg-zinc-800 border-b border-white/5 shrink-0 overflow-hidden">
                 <Image src="/projects/streamxt.jpg" alt="StreamXT Project" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover group-hover:scale-105 transition-transform duration-500" />
               </div>
@@ -147,10 +156,10 @@ export default function Home() {
                   <SiDocker className="w-5 h-5 text-blue-500" />
                 </div>
               </div>
-            </div>
+            </a>
 
             {/* Project Card 2 */}
-            <div className="bg-[#1c2024] rounded-2xl border border-white/5 hover:border-white/10 transition-colors flex flex-col h-full group overflow-hidden">
+            <a href="https://github.com/Abhaysoft-inc/githall" target="_blank" rel="noopener noreferrer" className="bg-[#1c2024] rounded-2xl border border-white/5 hover:border-white/10 transition-colors flex flex-col h-full group overflow-hidden">
               <div className="relative w-full h-48 bg-zinc-800 border-b border-white/5 shrink-0 overflow-hidden">
                 <Image src="/placeholder.svg" alt="Project Placeholder" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover group-hover:scale-105 transition-transform duration-500" />
               </div>
@@ -168,10 +177,10 @@ export default function Home() {
                   <SiGit className="w-5 h-5 text-orange-500" />
                 </div>
               </div>
-            </div>
+            </a>
 
             {/* Project Card 3 */}
-            <div className="bg-[#1c2024] rounded-2xl border border-white/5 hover:border-white/10 transition-colors flex flex-col h-full group overflow-hidden">
+            <a href="https://github.com/Abhaysoft-inc/thatlytics" target="_blank" rel="noopener noreferrer" className="bg-[#1c2024] rounded-2xl border border-white/5 hover:border-white/10 transition-colors flex flex-col h-full group overflow-hidden">
               <div className="relative w-full h-48 bg-zinc-800 border-b border-white/5 shrink-0 overflow-hidden">
                 <Image src="/placeholder.svg" alt="Project Placeholder" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover group-hover:scale-105 transition-transform duration-500" />
               </div>
@@ -190,7 +199,7 @@ export default function Home() {
                   <SiPostgresql className="w-5 h-5 text-blue-300" />
                 </div>
               </div>
-            </div>
+            </a>
           </div>
 
           <div className="flex justify-end pt-2">
