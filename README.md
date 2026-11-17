@@ -14,7 +14,7 @@
 I enjoy building things that work reliably under the hood — whether that's low-latency streaming pipelines, AI-assisted tools, or clean REST APIs. I spend most of my time working across Python, TypeScript, and Go, exploring how distributed systems handle load, and participating in hackathons with friends.
 
 - 🎓 **Education**: B.Tech in Electrical Engineering (Minor in AI & ML), KNIT Sultanpur (2024–2028)
-- 💼 **Experience**: SDE Intern at OGCollege · Ex-Software Engineering Intern at HITAI
+- 💼 **Experience**: Full Stack AI Intern at Onspot Legal · SDE Intern at OGCollege · Ex-Software Engineering Intern at HITAI
 - 🏆 **Hackathons**: 1st Place at RIFT Hackathon 2026 · 2nd Place at HackWithUP · 3rd Place at NASA Space Apps 2025
 - 🔍 **Interests**: Distributed systems, real-time media (WebRTC/FFmpeg), applied LLMs/RAG, and reverse engineering
 

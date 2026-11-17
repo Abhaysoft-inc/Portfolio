@@ -85,6 +85,15 @@ export default async function Home() {
 
           <div className="space-y-0 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-zinc-800 before:to-transparent">
             <ExperienceItem
+              year="Nov 2026 – Present"
+              title="Full Stack AI Intern – Onspot Legal"
+              company="Remote"
+              logoUrl="/logos/onspotlegal.jpg"
+              logoAlt="Onspot Legal"
+              logoClassName="rounded-full"
+            />
+
+            <ExperienceItem
               year="May 2026 – Present"
               title="SDE Intern – OGCollege"
               company="Remote"

@@ -23,6 +23,7 @@
 
 ## Work Experience
 
+- **Full Stack AI Intern at Onspot Legal** (Nov 2026 – Present | Remote)
 - **SDE Intern at OGCollege** (May 2026 – Present | Remote):
   - Contributed to production TypeScript, PostgreSQL, and Redis stack.
   - Merged 15+ pull requests across product features, backend services, and platform improvements.
